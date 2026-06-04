@@ -16,13 +16,16 @@
         <img src="https://rtjvqugksbtsewtkbiih.supabase.co/storage/v1/object/public/assets/SQlogo.png" alt="FitPaws">
         <span>fitpaws</span>
       </a>
-      <ul class="nav-links">
-        <li><a href="#features">Features</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="/support.html">Support</a></li>
-        <li><a href="/privacy.html">Privacy</a></li>
-        <li><a class="nav-cta" href="#">Download Free</a></li>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#features" onclick="closeMenu()">Features</a></li>
+        <li><a href="#pricing" onclick="closeMenu()">Pricing</a></li>
+        <li><a href="/support.html" onclick="closeMenu()">Support</a></li>
+        <li><a href="/privacy.html" onclick="closeMenu()">Privacy</a></li>
+        <li><a class="nav-cta" href="#" onclick="closeMenu()">Download Free</a></li>
       </ul>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
@@ -137,23 +140,31 @@
       <div class="steps">
         <div class="step">
           <div class="step-num">1</div>
-          <h3>Create your dog's profile</h3>
-          <p>Enter breed, age, weight, and activity level. FitPaws calculates a personalised calorie target instantly.</p>
+          <div class="step-content">
+            <h3>Create your dog's profile</h3>
+            <p>Enter breed, age, weight, and activity level. FitPaws calculates a personalised calorie target instantly.</p>
+          </div>
         </div>
         <div class="step">
           <div class="step-num">2</div>
-          <h3>Log meals daily</h3>
-          <p>Search our food database, scan a barcode, or add a custom food. Each entry updates the daily calorie tracker.</p>
+          <div class="step-content">
+            <h3>Log meals daily</h3>
+            <p>Search our food database, scan a barcode, or add a custom food. Each entry updates the daily calorie tracker.</p>
+          </div>
         </div>
         <div class="step">
           <div class="step-num">3</div>
-          <h3>Track weight & activity</h3>
-          <p>Weigh in regularly and log exercise. See how it all fits together in the daily dashboard.</p>
+          <div class="step-content">
+            <h3>Track weight &amp; activity</h3>
+            <p>Weigh in regularly and log exercise. See how it all fits together in the daily dashboard.</p>
+          </div>
         </div>
         <div class="step">
           <div class="step-num">4</div>
-          <h3>Ask the Coach</h3>
-          <p>Have a nutrition question? The AI Coach answers based on your dog's actual data — not generic advice.</p>
+          <div class="step-content">
+            <h3>Ask the Coach</h3>
+            <p>Have a nutrition question? The AI Coach answers based on your dog's actual data — not generic advice.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -241,5 +252,17 @@
     </div>
   </footer>
 
+  <script>
+    function toggleMenu() {
+      const links = document.getElementById('nav-links');
+      const btn = document.getElementById('hamburger');
+      links.classList.toggle('open');
+      btn.classList.toggle('active');
+    }
+    function closeMenu() {
+      document.getElementById('nav-links').classList.remove('open');
+      document.getElementById('hamburger').classList.remove('active');
+    }
+  </script>
 </body>
 </html>
