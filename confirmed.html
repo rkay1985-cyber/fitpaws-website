@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Confirmed — FitPaws</title>
+  <link rel="icon" href="https://rtjvqugksbtsewtkbiih.supabase.co/storage/v1/object/public/assets/SQlogo.png">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .confirm-wrap {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #1a4d32 0%, #2D7A5A 100%);
+      padding: 24px;
+    }
+    .confirm-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 48px 40px;
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.2);
+    }
+    .confirm-icon {
+      width: 72px;
+      height: 72px;
+      background: #e3f4eb;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 36px;
+    }
+    .confirm-card h1 {
+      font-size: 26px;
+      font-weight: 800;
+      color: #0f2318;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+    .confirm-card p {
+      font-size: 16px;
+      color: #5a7a68;
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+    .open-btn {
+      display: inline-block;
+      background: #2D7A5A;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 600;
+      padding: 15px 36px;
+      border-radius: 50px;
+      text-decoration: none;
+      margin-bottom: 16px;
+      transition: background .15s;
+    }
+    .open-btn:hover { background: #1f5c42; text-decoration: none; }
+    .fallback {
+      font-size: 13px;
+      color: #8aaa98;
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+    .logo-wrap {
+      margin-bottom: 28px;
+    }
+    .logo-wrap img { height: 56px; width: auto; }
+  </style>
+</head>
+<body>
+  <div class="confirm-wrap">
+    <div class="confirm-card">
+      <div class="logo-wrap">
+        <img src="https://rtjvqugksbtsewtkbiih.supabase.co/storage/v1/object/public/assets/SQlogo.png" alt="FitPaws">
+      </div>
+      <div class="confirm-icon">✅</div>
+      <h1>Email confirmed!</h1>
+      <p>Your FitPaws account is now active. Open the app to sign in and start tracking.</p>
+      <a class="open-btn" href="fitpaws://" id="open-app">Open FitPaws</a>
+      <p class="fallback" id="fallback" style="display:none;">
+        If the app didn't open, make sure FitPaws is installed on your device, then open it and sign in.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    // Show fallback message after 2.5s if app doesn't open
+    setTimeout(function() {
+      document.getElementById('fallback').style.display = 'block';
+    }, 2500);
+  </script>
+</body>
+</html>
