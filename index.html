@@ -4,8 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FitPaws — Nutrition tracking for happy dogs</title>
-  <meta name="description" content="Track your dog's nutrition, weight, and activity. Get personalised calorie targets based on veterinary formulas. Free to download on iOS.">
-  <link rel="icon" href="https://rtjvqugksbtsewtkbiih.supabase.co/storage/v1/object/public/assets/SQlogo.png">
+  <meta name="description" content="Track your dog's nutrition, weight, and activity. Personalised calorie targets based on veterinary formulas. Coming soon to iPhone and Android.">
+  <link rel="canonical" href="https://fitpaws.app/">
+
+  <!-- Social cards -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FitPaws">
+  <meta property="og:title" content="FitPaws — Nutrition tracking for happy dogs">
+  <meta property="og:description" content="Personalised calorie targets, food logging, weight tracking and an AI nutrition coach for your dog. Coming soon to iPhone and Android.">
+  <meta property="og:url" content="https://fitpaws.app/">
+  <meta property="og:image" content="https://fitpaws.app/assets/SQlogo.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="FitPaws — Nutrition tracking for happy dogs">
+  <meta name="twitter:description" content="Personalised calorie targets, food logging, weight tracking and an AI nutrition coach for your dog.">
+  <meta name="twitter:image" content="https://fitpaws.app/assets/SQlogo.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "FitPaws",
+    "operatingSystem": "iOS, Android",
+    "applicationCategory": "HealthApplication",
+    "description": "Dog nutrition, weight and activity tracking with personalised calorie targets based on WSAVA veterinary formulas.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" }
+  }
+  </script>
+
+  <link rel="icon" href="/assets/SQlogo.png">
+  <link rel="apple-touch-icon" href="/assets/SQlogo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,14 +43,14 @@
   <nav>
     <div class="nav-inner">
       <a class="nav-logo" href="/">
-        <img src="https://rtjvqugksbtsewtkbiih.supabase.co/storage/v1/object/public/assets/REClogo.png" alt="FitPaws">
+        <img src="/assets/REClogo.png" alt="FitPaws">
       </a>
       <ul class="nav-links" id="nav-links">
         <li><a href="#features" onclick="closeMenu()">Features</a></li>
         <li><a href="#pricing" onclick="closeMenu()">Pricing</a></li>
         <li><a href="/support.html" onclick="closeMenu()">Support</a></li>
         <li><a href="/privacy.html" onclick="closeMenu()">Privacy</a></li>
-        <li><a class="nav-cta" href="#" onclick="closeMenu()">Download Free</a></li>
+        <li><a class="nav-cta" href="#download" onclick="closeMenu()">Get the app</a></li>
       </ul>
       <button type="button" class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Open menu">
         <span></span><span></span><span></span>
@@ -35,11 +65,18 @@
         <div class="hero-badge">🐾 Based on WSAVA veterinary formulas</div>
         <h1>Your dog's health,<br><em>finally tracked</em><br>properly.</h1>
         <p>Personalised daily calorie targets, food logging, weight tracking, and an AI nutrition coach — built around the same formulas your vet uses.</p>
+        <div class="store-badges">
+          <span class="store-badge disabled" aria-disabled="true" title="Coming soon to the App Store">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            <span class="store-badge-text"><small>Coming soon on the</small><strong>App Store</strong></span>
+          </span>
+          <span class="store-badge disabled" aria-disabled="true" title="Coming soon to Google Play">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 1.8c-.4.4-.6 1-.6 1.7v17c0 .7.2 1.3.6 1.7l.1.1 9.5-9.5v-.2L3.7 1.7l-.1.1zm12.8 12.9l-3.2-3.2v-.2l3.2-3.2.1 0 3.8 2.2c1.1.6 1.1 1.6 0 2.2l-3.8 2.2h-.1zm-3.9-3.3L3.6 22.3c.4.4 1 .4 1.7 0l10.4-6-3.2-3.2v.3zm0-2.6l3.2-3.2-10.4-6c-.7-.4-1.3-.3-1.7 0l8.9 9.2z"/></svg>
+            <span class="store-badge-text"><small>Coming soon on</small><strong>Google Play</strong></span>
+          </span>
+        </div>
+        <p class="hero-note">In beta testing now · launching soon on iPhone &amp; Android</p>
         <div class="btn-group">
-          <a class="btn btn-white" href="#">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-            Download on the App Store
-          </a>
           <a class="btn btn-ghost" href="#features">See how it works</a>
         </div>
       </div>
@@ -82,7 +119,7 @@
       <div class="trust-dot"></div>
       <div class="trust-item">🐕 Breed-specific calorie adjustments</div>
       <div class="trust-dot"></div>
-      <div class="trust-item">📱 Free to download on iOS</div>
+      <div class="trust-item">📱 Coming soon to iPhone &amp; Android</div>
       <div class="trust-dot"></div>
       <div class="trust-item">🔒 Your data stays private</div>
     </div>
@@ -97,32 +134,32 @@
         <p class="section-sub">From daily food tracking to AI-powered nutrition coaching — all in one place.</p>
       </div>
       <div class="features-grid">
-        <div class="feature-card">
+        <div class="feature-card reveal">
           <div class="feature-icon">🎯</div>
           <h3>Personalised calorie targets</h3>
           <p>Daily targets calculated using WSAVA veterinary formulas, adjusted for your dog's breed, age, neutered status, and activity level.</p>
         </div>
-        <div class="feature-card">
+        <div class="feature-card reveal">
           <div class="feature-icon">🍗</div>
           <h3>Food logging</h3>
           <p>Search thousands of pet foods, scan barcodes, or add your own. Track calories, portions, and meal frequency with ease.</p>
         </div>
-        <div class="feature-card">
+        <div class="feature-card reveal">
           <div class="feature-icon">⚖️</div>
           <h3>Weight tracking</h3>
           <p>Log weight over time and visualise trends. Set a goal weight and track progress toward it week by week.</p>
         </div>
-        <div class="feature-card">
+        <div class="feature-card reveal">
           <div class="feature-icon">🏃</div>
           <h3>Activity logging</h3>
           <p>Record walks, runs, swims, and play sessions. See how activity affects daily calorie needs in real time.</p>
         </div>
-        <div class="feature-card">
+        <div class="feature-card reveal">
           <div class="feature-icon">🤖</div>
           <h3>AI Nutrition Coach</h3>
           <p>Ask nutrition questions and get personalised advice based on your dog's actual logged data, breed, and health goals.</p>
         </div>
-        <div class="feature-card">
+        <div class="feature-card reveal">
           <div class="feature-icon">📋</div>
           <h3>Vet-ready reports</h3>
           <p>Generate professional health reports covering nutrition, weight trends and activity history — ready to share at your next vet visit.</p>
@@ -137,28 +174,28 @@
       <span class="section-label">How it works</span>
       <h2 class="section-title">Up and running in minutes</h2>
       <div class="steps">
-        <div class="step">
+        <div class="step reveal">
           <div class="step-num">1</div>
           <div class="step-content">
             <h3>Create your dog's profile</h3>
             <p>Enter breed, age, weight, and activity level. FitPaws calculates a personalised calorie target instantly.</p>
           </div>
         </div>
-        <div class="step">
+        <div class="step reveal">
           <div class="step-num">2</div>
           <div class="step-content">
             <h3>Log meals daily</h3>
             <p>Search our food database, scan a barcode, or add a custom food. Each entry updates the daily calorie tracker.</p>
           </div>
         </div>
-        <div class="step">
+        <div class="step reveal">
           <div class="step-num">3</div>
           <div class="step-content">
             <h3>Track weight &amp; activity</h3>
             <p>Weigh in regularly and log exercise. See how it all fits together in the daily dashboard.</p>
           </div>
         </div>
-        <div class="step">
+        <div class="step reveal">
           <div class="step-num">4</div>
           <div class="step-content">
             <h3>Ask the Coach</h3>
@@ -179,7 +216,7 @@
       </div>
       <div class="pricing-grid">
 
-        <div class="price-card">
+        <div class="price-card reveal">
           <div class="price-tier">Free</div>
           <div class="price-amount">£0 <span>/ forever</span></div>
           <div class="price-desc">The essentials to get started</div>
@@ -192,14 +229,14 @@
             <li><span class="check">✓</span> AI Coach (5 messages/month)</li>
             <li><span class="check">✓</span> Awards &amp; streaks</li>
           </ul>
-          <a class="price-btn" href="#">Download free</a>
+          <a class="price-btn" href="#download">Get started free</a>
         </div>
 
-        <div class="price-card featured">
+        <div class="price-card featured reveal">
           <div class="price-badge">Most popular</div>
           <div class="price-tier">Companion</div>
           <div class="price-amount">£1.99 <span>/ month</span></div>
-          <div class="price-annual" style="font-size:0.85rem;color:#6b8577;margin:-6px 0 2px;">or £14.99 / year — save ~37%</div>
+          <div class="price-annual">or £14.99 / year — save ~37%</div>
           <div class="price-desc">For dedicated dog parents</div>
           <ul class="price-features">
             <li><span class="check">✓</span> Everything in Free</li>
@@ -210,20 +247,20 @@
             <li><span class="check">✓</span> Award sharing</li>
             <li><span class="check">✓</span> 100 AI Coach messages/month</li>
           </ul>
-          <a class="price-btn" href="#">Get Companion</a>
+          <a class="price-btn" href="#download">Get Companion</a>
         </div>
 
-        <div class="price-card">
+        <div class="price-card reveal">
           <div class="price-tier">Family</div>
           <div class="price-amount">£4.99 <span>/ month</span></div>
-          <div class="price-annual" style="font-size:0.85rem;color:#6b8577;margin:-6px 0 2px;">or £39.99 / year — save ~33%</div>
+          <div class="price-annual">or £39.99 / year — save ~33%</div>
           <div class="price-desc">For multi-dog households</div>
           <ul class="price-features">
             <li><span class="check">✓</span> Everything in Companion</li>
             <li><span class="check">✓</span> Up to 5 dog profiles</li>
             <li><span class="check">✓</span> Unlimited AI Coach messages</li>
           </ul>
-          <a class="price-btn" href="#">Get Family</a>
+          <a class="price-btn" href="#download">Get Family</a>
         </div>
 
       </div>
@@ -231,19 +268,25 @@
   </section>
 
   <!-- CTA -->
-  <section class="cta-strip">
-    <h2>Start tracking for free today</h2>
-    <p>Join thousands of dog owners tracking their dog's nutrition the smart way.</p>
-    <a class="btn btn-white" href="#">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-      Download on the App Store
-    </a>
+  <section class="cta-strip" id="download">
+    <h2>Launching soon on iPhone &amp; Android</h2>
+    <p>FitPaws is in beta testing now. The App Store and Google Play listings are on their way.</p>
+    <div class="store-badges store-badges-center">
+      <span class="store-badge disabled" aria-disabled="true" title="Coming soon to the App Store">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        <span class="store-badge-text"><small>Coming soon on the</small><strong>App Store</strong></span>
+      </span>
+      <span class="store-badge disabled" aria-disabled="true" title="Coming soon to Google Play">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 1.8c-.4.4-.6 1-.6 1.7v17c0 .7.2 1.3.6 1.7l.1.1 9.5-9.5v-.2L3.7 1.7l-.1.1zm12.8 12.9l-3.2-3.2v-.2l3.2-3.2.1 0 3.8 2.2c1.1.6 1.1 1.6 0 2.2l-3.8 2.2h-.1zm-3.9-3.3L3.6 22.3c.4.4 1 .4 1.7 0l10.4-6-3.2-3.2v.3zm0-2.6l3.2-3.2-10.4-6c-.7-.4-1.3-.3-1.7 0l8.9 9.2z"/></svg>
+        <span class="store-badge-text"><small>Coming soon on</small><strong>Google Play</strong></span>
+      </span>
+    </div>
   </section>
 
   <footer>
     <div class="footer-inner">
       <div class="footer-logo">
-        <img src="https://rtjvqugksbtsewtkbiih.supabase.co/storage/v1/object/public/assets/SQlogo.png" alt="FitPaws">
+        <img src="/assets/SQlogo.png" alt="FitPaws">
         <span>fitpaws</span>
       </div>
       <div class="footer-links">
@@ -252,7 +295,7 @@
         <a href="/terms.html">Terms of Service</a>
         <a href="mailto:support@fitpaws.app">support@fitpaws.app</a>
       </div>
-      <div class="footer-copy">© 2025 FitPaws · Nutrition tracking for happy dogs</div>
+      <div class="footer-copy">© 2026 FitPaws · Nutrition tracking for happy dogs</div>
     </div>
   </footer>
 
@@ -266,6 +309,18 @@
     function closeMenu() {
       document.getElementById('nav-links').classList.remove('open');
       document.getElementById('hamburger').classList.remove('active');
+    }
+
+    // Scroll-reveal: fade sections up as they enter the viewport.
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.15 });
+      document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+    } else {
+      document.querySelectorAll('.reveal').forEach((el) => el.classList.add('visible'));
     }
   </script>
 </body>
